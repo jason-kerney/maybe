@@ -31,7 +31,7 @@ jobs:
         author_name: jason-kerney
         branch: main
         cwd: '.'
-        default_author: jason-kerney
+        default_author: github_actor
         message: 'Updating Documentation'
         push: true
     - uses: actions/checkout@v2
