@@ -6,13 +6,15 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "booklisp": "^2.0.0"
+  },
   "devDependencies": {
     "all-contributors-cli": "^6.20.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "scripts": {
+        "build": "node ./node_modules/booklisp/index.js ./docs/readme.md ./readme.md"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jason-kerney/maybe.git"
