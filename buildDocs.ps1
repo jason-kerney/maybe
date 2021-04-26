@@ -1,1 +1,1 @@
-ooklisp ./docs/readme.md ./ReadMe.md
+booklisp ./docs/readme.md ./ReadMe.md
