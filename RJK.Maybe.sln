@@ -5,6 +5,23 @@ VisualStudioVersion = 16.6.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RJK.Maybe", "Lib\RJK.Maybe.fsproj", "{45A430EE-027B-4F81-A5EF-40A51C22AD4F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{F2C582FF-BD52-4FB5-BF42-D9EEBE1B635E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		buildDocs.ps1 = buildDocs.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{4DC4ABF3-70AB-4176-8F35-6B19166D12BC}"
+	ProjectSection(SolutionItems) = preProject
+		docs\contributers.md = docs\contributers.md
+		docs\readme.md = docs\readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{77EB7AF6-70B1-4ACF-9B67-0BD4127EA488}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
