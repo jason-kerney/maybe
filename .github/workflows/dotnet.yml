@@ -6,11 +6,12 @@ on:
   pull_request:
     branches: [ main ]
 
-jobs:
-  build-docs:
-    name: Build Documents
+jobs:   
+  
+  build:
+
     runs-on: ubuntu-latest
-    environment: production
+
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ env.NODE_VERSION }}
@@ -23,6 +24,7 @@ jobs:
         # deploy to Azure Web App.
         npm install
         npm run build --if-present
+
     - uses: EndBug/add-and-commit@v7
       with:
         add: './readme.md'
@@ -32,13 +34,6 @@ jobs:
         default-author: jason-kerney
         message: 'Updating Documentation'
         push: true
-    
-  
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
