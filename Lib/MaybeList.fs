@@ -151,3 +151,12 @@ let reduce f (items: _ mlist): _ maybe =
         
         return items |> List.reduce f
     }
+    
+let length (items: _ mlist): int maybe =
+    maybe {
+        let! items = items
+        return items.Length
+    }
+    
+let inline (|+|) item items = item |> cons items
+let inline (|?|) item items = item |> consM items
