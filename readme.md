@@ -9,7 +9,8 @@
 
 1. Section: [RJK.Maybe Library Overview](#rjkmaybe-library-overview)
 2. Section: [Maybe Module API](#maybe-module-api)
-3. Section: [Contributors ✨](#contributors-)
+3. Section: [Maybe Monad API](#maybe-monad-api)
+4. Section: [Contributors ✨](#contributors-)
 
 ## RJK.Maybe Library Overview ##
 
@@ -143,6 +144,49 @@ Converts an option to a `maybe`, using the provided error message if None.
 #### callToString ####
 
 Converts a `maybe` value to a string representation.
+
+## Maybe Monad API ##
+
+### Overview ###
+
+This document describes the monadic and computation expression support for the `maybe` type in the F# library, as implemented in `MaybeMonad.fs`.
+
+### Functions ###
+
+#### asMaybe ####
+
+Wraps a value in a `maybe` (Ok) type.
+
+#### delayMaybe ####
+
+Delays the execution of a function returning a `maybe` value.
+
+#### bindWith ####
+
+Binds a function to a `maybe` value, propagating errors and exceptions.
+
+#### combineMaybeWith ####
+
+Combines two `maybe` values, returning the second if the first is Ok, otherwise propagating the error.
+
+#### ready ####
+
+A `maybe` value representing a successful unit result.
+
+### MaybeBuilder ###
+
+The computation expression builder for the maybe monad, enabling F# computation expressions with `maybe` values.
+
+- **Return**: Wraps a value in a `maybe` (Ok) type.
+- **ReturnFrom**: Returns an existing `maybe` value.
+- **Delay**: Delays the execution of a function returning a `maybe` value.
+- **Bind**: Binds a function to a `maybe` value, propagating errors and exceptions.
+- **Combine**: Combines two `maybe` values, returning the second if the first is Ok, otherwise propagating the error.
+- **Zero**: Returns a successful unit `maybe` value.
+
+#### maybe ####
+
+The computation expression instance for the maybe monad. Use `maybe { ... }` to write monadic code with `maybe` values.
 
 ## Contributors ✨ ##
 

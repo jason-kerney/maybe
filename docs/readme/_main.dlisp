@@ -4,6 +4,7 @@
     (include
         (Section ./overview.md)
         (Section ./maybe-api.md)
+        (Section ./maybe-monad-api.md)
         (Section ./contributers.md)
     )
 )
