@@ -10,7 +10,8 @@
 1. Section: [RJK.Maybe Library Overview](#rjkmaybe-library-overview)
 2. Section: [Maybe Module API](#maybe-module-api)
 3. Section: [Maybe Monad API](#maybe-monad-api)
-4. Section: [Contributors ✨](#contributors-)
+4. Section: [Base Types API](#base-types-api)
+5. Section: [Contributors ✨](#contributors-)
 
 ## RJK.Maybe Library Overview ##
 
@@ -187,6 +188,63 @@ The computation expression builder for the maybe monad, enabling F# computation 
 #### maybe ####
 
 The computation expression instance for the maybe monad. Use `maybe { ... }` to write monadic code with `maybe` values.
+
+## Base Types API ##
+
+### Overview ###
+
+This document describes the base types and helpers for the `maybe` library, as defined in `BaseTypes.fs`.
+
+### Types ###
+
+#### ProcessFailure ####
+
+Represents the possible failure cases for a process.
+- **ExceptionFailure**: Failure due to an exception.
+- **GeneralFailure**: Failure with a general error message.
+- **CombinationError**: Failure due to a combination of multiple failures.
+
+#### maybe<'Value> ####
+
+Alias for a result type with a value or `ProcessFailure`.
+
+#### Maybe<'Value> ####
+
+Synonym for `maybe<'Value>` for convenience.
+
+#### mlist<'Value> ####
+
+A maybe-wrapped list of values.
+
+#### mseq<'Value> ####
+
+A maybe-wrapped sequence of values.
+
+### Helpers ###
+
+#### asGeneralFailure ####
+
+Wraps a string as a `GeneralFailure` in a `maybe` error.
+
+#### asExceptionFailure ####
+
+Wraps an exception as an `ExceptionFailure` in a `maybe` error.
+
+#### asCombinationFailure ####
+
+Wraps a list of failures as a `CombinationError` in a `maybe` error.
+
+#### combineWith ####
+
+Combines two `ProcessFailure` values into a single `CombinationError`.
+
+#### asFailureCombinedWith ####
+
+Synonym for `combineWith`.
+
+#### apply ####
+
+Applies a maybe-wrapped function to a maybe-wrapped value.
 
 ## Contributors ✨ ##
 

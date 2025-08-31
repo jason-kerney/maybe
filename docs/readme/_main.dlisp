@@ -5,6 +5,7 @@
         (Section ./overview.md)
         (Section ./maybe-api.md)
         (Section ./maybe-monad-api.md)
+        (Section ./base-types-api.md)
         (Section ./contributers.md)
     )
 )
