@@ -1,1 +1,1 @@
-booklisp ./docs/readme.md ./readMe.md
+doculisp ./docs/_main.dlisp ./readMe.md
