@@ -60,7 +60,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 Contributions are welcome! Please see the contributing guidelines in the repository.
 
-## Contributors ✨
+## Contributors ✨ ##
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
