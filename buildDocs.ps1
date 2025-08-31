@@ -1,1 +1,1 @@
-doculisp ./docs/_main.dlisp ./readMe.md
+doculisp .\docs\_project.dlproj 
