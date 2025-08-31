@@ -3,6 +3,7 @@
     (author Jason Kerney)
     (include
         (Section ./overview.md)
+        (Section ./maybe-api.md)
         (Section ./contributers.md)
     )
 )

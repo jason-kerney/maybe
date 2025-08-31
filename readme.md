@@ -8,7 +8,8 @@
 # "Maybe" #
 
 1. Section: [RJK.Maybe Library Overview](#rjkmaybe-library-overview)
-2. Section: [Contributors ✨](#contributors-)
+2. Section: [Maybe Module API](#maybe-module-api)
+3. Section: [Contributors ✨](#contributors-)
 
 ## RJK.Maybe Library Overview ##
 
@@ -62,6 +63,86 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ### Contributing ###
 
 Contributions are welcome! Please see the contributing guidelines in the repository.
+
+## Maybe Module API ##
+
+### Overview ###
+
+This document provides API documentation for the `Maybe` module in the F# library. It describes the core utilities for working with the `maybe` type.
+
+### Functions ###
+
+#### wrap ####
+
+Wraps a value in a `maybe` (Ok) type.
+
+#### orMaybe ####
+
+Returns the first successful (Ok) value from two `maybe` values, or the second if both are errors.
+
+#### isPreferredOver ####
+
+Returns the first value if it is Ok, otherwise the second.
+
+#### butPrefer ####
+
+Returns the second value if it is Ok, otherwise the first.
+
+#### simplify ####
+
+Flattens a nested `maybe` value (i.e., `maybe maybe`) into a single `maybe`.
+
+#### toBool ####
+
+Converts a `bool maybe` to a `bool`, returning false if Error.
+
+#### hasValue ####
+
+Returns true if the `maybe` value is Ok.
+
+#### isError ####
+
+Returns true if the `maybe` value is Error.
+
+#### orDefault ####
+
+Returns the value if Ok, otherwise returns the provided default value.
+
+#### lift ####
+
+Lifts a function to operate on a `maybe` value.
+
+#### mlift ####
+
+Lifts a function returning `maybe` to operate on a `maybe` value (monadic bind).
+
+#### llift ####
+
+Applies a lifted function to a `maybe` value.
+
+#### mllift ####
+
+Applies a monadic lifted function to a `maybe` value.
+
+#### partialLift ####
+
+Partially lifts a function returning `maybe` to operate on a `maybe` value.
+
+#### map ####
+
+Maps a function over a `maybe` value using computation expressions.
+
+#### check ####
+
+Checks a predicate on a `maybe` value, returning a bool.
+
+#### fromOption ####
+
+Converts an option to a `maybe`, using the provided error message if None.
+
+#### callToString ####
+
+Converts a `maybe` value to a string representation.
 
 ## Contributors ✨ ##
 
