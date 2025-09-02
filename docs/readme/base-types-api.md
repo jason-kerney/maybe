@@ -6,7 +6,7 @@
 
 <!-- (dl (# Overview)) -->
 
-This document describes the base types and helpers for the `maybe` library, as defined in `BaseTypes.fs`.
+This document describes the base types and helpers for the `maybe` library, as defined in `BaseTypes.fs`. The `maybe` type is an alias for `Result<'Value, ProcessFailure>`, providing a foundation for error-aware workflows and rich error information.
 
 <!-- (dl (# Types)) -->
 

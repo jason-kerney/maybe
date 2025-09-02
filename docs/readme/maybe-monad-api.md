@@ -6,7 +6,7 @@
 
 <!-- (dl (# Overview)) -->
 
-This document describes the monadic and computation expression support for the `maybe` type in the F# library, as implemented in `MaybeMonad.fs`.
+This document describes the monadic and computation expression support for the `maybe` type (an alias for `Result<'Value, ProcessFailure>`) in the F# library, as implemented in `MaybeMonad.fs`. The focus is on error handling and propagation, not on option types.
 
 <!-- (dl (# Functions)) -->
 

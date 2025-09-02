@@ -6,7 +6,7 @@
 
 <!-- (dl (# Overview)) -->
 
-This document provides API documentation for the `Maybe` module in the F# library. It describes the core utilities for working with the `maybe` type.
+This document provides API documentation for the `Maybe` module in the F# library. It describes the core utilities for working with the `maybe` type, which is an alias for `Result<'Value, ProcessFailure>`. The focus is on error handling and propagation, not on option types.
 
 <!-- (dl (# Functions)) -->
 
